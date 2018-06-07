@@ -1,0 +1,100 @@
+.user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  i {
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 24px;
+    width: 45px;
+    &:hover {
+      color: $color-main;
+    }
+  }
+  &__cart {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+    width: 52px;
+    height: 52px;
+    border-radius: 90px;
+    background-color: $color-main;
+    position: relative;
+    margin-left: auto;
+    i {
+      font-size: 26px;
+      line-height: 31px;
+      color: $color-secondary;
+    }
+    &:hover {
+      i {
+        color: $color-secondary;
+      }
+      transition: 0.3s;
+      background-color: #fff;
+    }
+  }
+  &__price {
+    margin: 0;
+    font-size: 16px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    span {
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-main;
+    }
+    span.desktop-inline {
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+    }
+    i {
+      font-size: 14px;
+      line-height: 17px;
+      width: 12px;
+      color: $color-main;
+    }
+  }
+}
+
+.userCounter {
+  position: absolute;
+  right: -15px;
+  top: 0;
+  font-size: 14px;
+  line-height: 17px;
+  width: 25px;
+  min-height: 25px;
+  background-color: #FFFFFF;
+  border-radius: 90px;
+  font-weight: 700;
+  padding-top: 4px;
+  color: $color-secondary;
+}
+
+@media ($mobile-width) {
+  .user {
+    width: 232px;
+    margin-left: auto;
+    &__cart {
+      margin-left: 0;
+    }
+  }
+}
+
+@media ($tablet-width) {
+  .user {
+    width: 350px;
+    order: 2;
+    margin-left: auto;
+    &__price {
+      margin-left: auto;
+    }
+  }
+}
+@media ($desktop-width) {
+
+}

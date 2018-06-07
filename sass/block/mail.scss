@@ -1,0 +1,166 @@
+.mail {
+  background-color: #f5f5f5;
+  &__wrapper {
+    @include container;
+    width: 280px;
+    margin: 0 auto;
+  }
+  &__text {
+    margin-bottom: 15px;
+    i {
+      font-size: 45px;
+      display: none;
+    }
+    p:nth-of-type(1) {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    p:nth-of-type(2) {
+      margin: 0;
+    }
+  }
+  &__form {
+    margin-bottom: 20px;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    input {
+      width: 181px;
+      border: 1px solid $color-main;
+      border-radius: 90px 0px 0px 90px;
+      height: 35px;
+      font-size: 14px;
+      padding-left: 15px;
+      outline: none;
+    }
+    button {
+      margin: 0;
+      border: 0;
+      background-color: $color-main;
+      border-radius: 0px 90px 90px 0px;
+      font-size: 14px;
+      outline: none;
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-main;
+        transition: 0.3s;
+      }
+      i {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-around;
+    i {
+      font-size: 20px;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+  .mail {
+    &__wrapper {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+}
+@media ($tablet-width) {
+  .mail {
+    &__wrapper {
+      width: 756px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 25px;
+    }
+    &__text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      p:last-child {
+        margin-left: 5px;
+      }
+    }
+    &__form {
+      margin-left: auto;
+      input {
+        width: 300px;
+      }
+      button {
+        display: flex;
+        padding-right: 12px;
+        i {
+          display: block;
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+    &__link {
+      width: 200px;
+      padding-top: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media ($desktop-width) {
+  .mail {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      width: 1200px;
+    }
+    &__text {
+      width: 370px;
+      flex-direction: column;
+      padding-left: 60px;
+      position: relative;
+      margin: 0;
+      i {
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+      p:nth-of-type(1) {
+        font-size: 20px;
+      }
+      p:last-child {
+        margin-left: 5px;
+      }
+    }
+    &__form {
+      margin: 0;
+      margin-left: auto;
+      width: 460px;
+      input {
+        height: 45px;
+      }
+      button {
+        padding-right: 20px;
+        font-weight: bold;
+        font-size: 16px;
+        i {
+          font-size: 18px;
+          margin-right: 10px;
+        }
+      }
+    }
+    &__link {
+      width: 250px;
+      padding-top: 0px;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+  min-width: 320px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+  font-size: 0px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+body {
+  font-family: $font-main;
+  color: $color-secondary;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+.mobile {
+  display: flex !important;
+}
+.tablet {
+  display: none !important;
+}
+.desktop {
+  display: none !important;
+}
+
+.desktop-inline {
+  display: none!important;
+}
+@media ($mobile-width) {
+  .tablet {
+    display: flex !important;
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+@media ($tablet-width) {
+  .desktop {
+    display: flex !important;
+  }
+  .desktop-inline {
+    display: inline !important;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  &--20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &--25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  &--middle {
+    align-items: center;
+  }
+}
+.openMenu {
+  width: 35px;
+  height: 24px;
+  background-image: url('../img/icons/icon-menu-burger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: auto;
+  margin-top: 13px;
+}
+.closeMenu,
+.closeNavigation {
+  width: 35px;
+  height: 24px;
+  background-image: url('../img/icons/icon-menu-cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+@media ($tablet-width) {
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+}
+
+.slick-arrow {
+  display: none !important;
+}
+.slick-dots {
+  display: flex !important;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+}
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  margin-left: 4px;
+  background-color: $color-main;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.slick-dots li.slick-active {
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.3s;
+}
+.slick-dots button {
+  display: none;
+}

@@ -1,0 +1,28 @@
+.main {
+  &__wrapper {
+    @include container;
+    padding-top: 0 !important;
+    display: flex;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: 2px solid $color-main;
+    &--white {
+      color: #fff;
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
