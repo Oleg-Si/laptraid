@@ -1,6 +1,7 @@
 .content {
 padding-top: 20px;
   .big-banner {
+    margin-bottom: 30px;
     div {
       width: 280px;
       margin-bottom: 5px;
@@ -8,6 +9,68 @@ padding-top: 20px;
     img {
       max-width: 669px;
       max-height: 200px;
+    }
+  }
+  .small-banner {
+    margin-bottom: 30px;
+  }
+  .slider1 {
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: center;
+    //width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &__item {
+    padding: 20px;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 280px !important;
+    &-title {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+    }
+    &-button {
+      border: 0;
+      background-color: $color-main;
+      border-radius: 90px;
+      padding: 10px 25px;
+      font-weight: bold;
+      margin-right: auto;
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-main;
+        transition: 0.3s;
+        outline: none;
+      }
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  i {
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      color: $color-main;
+    }
+  }
+  &__price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    i {
+      font-size: 16px;
     }
   }
 }
@@ -23,6 +86,10 @@ padding-top: 20px;
         max-height: 200px;
       }
     }
+    &__item {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
   }
 }
 @media ($tablet-width) {
@@ -37,6 +104,10 @@ padding-top: 20px;
         max-width: 669px;
         max-height: 200px;
       }
+    }
+    &__item {
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
 }

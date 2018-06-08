@@ -54,3 +54,10 @@ $('.big-banner').slick({
   autoplaySpeed: 2000,
   dots: true
 });
+
+$('.slider1').slick({
+  infinite: true,
+  speed: 1000,
+  slidesToShow: 4,
+  dots: true
+});
