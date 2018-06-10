@@ -36,6 +36,9 @@ body {
   left: 0;
   opacity: 0.5;
 }
+button {
+  outline: none;
+}
 .mobile {
   display: flex !important;
 }
@@ -117,20 +120,53 @@ body {
   justify-content: center;
   margin: 0;
 }
-.slick-dots li {
+.slick-dots li,
+.main .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
   margin-right: 4px;
   margin-left: 4px;
-  background-color: $color-main;
+  background-color: $color-main !important;
   border-radius: 90px;
   transition: 0.3s;
 }
-.slick-dots li.slick-active {
+.slick-dots li.slick-active,
+.main .owl-dots .owl-dot.active span {
   padding-left: 15px;
   padding-right: 15px;
   transition: 0.3s;
 }
 .slick-dots button {
   display: none;
+}
+.owl-next,
+.owl-prev {
+  background-color: transparent !important;
+}
+.owl-next span,
+.owl-prev span {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 10px;
+  margin: 0;
+  height: 20px;
+  display: block;
+  &:hover {
+    color: $color-main;
+  }
+}
+.owl-theme .owl-nav {
+  display: none;
+  position: absolute;
+  justify-content: space-between;
+  top: 50%;
+  margin-top: -50px;
+  width: 100%;
+}
+
+.owl-theme .owl-dots {
+  display: flex;
+  position: absolute;
+  top: -25px;
+  right: 0;
 }

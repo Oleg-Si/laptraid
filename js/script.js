@@ -55,9 +55,19 @@ $('.big-banner').slick({
   dots: true
 });
 
-$('.slider1').slick({
-  infinite: true,
-  speed: 1000,
-  slidesToShow: 4,
-  dots: true
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:55,
+  nav:true,
+  responsive:{
+    0:{
+      items:1
+    },
+    768:{
+      items:2
+    },
+    1200:{
+      items:3
+    }
+  }
 });
