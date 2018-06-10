@@ -12,8 +12,11 @@
       max-height: 200px;
     }
   }
-  .small-banner {
+  .full-banner {
     margin-bottom: 30px;
+  }
+  .small-banner {
+    display: none;
   }
   .slider1 {
     padding-top: 20px;
@@ -21,9 +24,13 @@
     position: relative;
   }
   &__item {
-    padding: 20px;
-    border: 1px solid #cccccc;
+    padding-left: 1px;
+    padding-right: 1px;
     margin-bottom: 20px;
+    &-wpapper {
+      padding: 20px;
+      border: 1px solid #cccccc;
+    }
     &-title {
       font-size: 16px;
       line-height: 19px;
@@ -70,6 +77,22 @@
       font-size: 16px;
     }
   }
+  &__about {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  &__partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-item {
+      margin-bottom: 30px;
+      max-width: 150px;
+      display: block;
+    }
+  }
 }
 @media ($mobile-width) {
   .content {
@@ -99,26 +122,108 @@
         max-height: 200px;
       }
     }
+    &__item {
+      &-title {
+        min-height: 57px;
+      }
+    }
+    &__partners {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
   }
 }
 @media ($desktop-width) {
   .content {
-    max-width: 900px;
+    max-width: 919px;
     .big-banner {
+      margin-bottom: 50px;
       div {
         width: 669px;
-        margin-bottom: 5px;
+        height: 250px;
+        margin-bottom: 20px;
       }
       img {
         max-width: 669px;
-        max-height: 200px;
+        max-height: 250px;
+        width: 669px;
+        height: 250px;
       }
     }
+    .small-banner {
+      display: block;
+      width: 208px;
+      margin-left: auto;
+      &__item {
+        padding: 20px;
+        padding-top: 30px;
+        border: 1px solid #cccccc;
+        height: 250px;
+        position: relative;
+        margin-bottom: 20px;
+        &::after {
+          content: 'Товар дня!';
+          position: absolute;
+          background-color: red;
+          top: -1px;
+          left: -1px;
+          font-size: 13px;
+          padding: 3px 14px;
+          font-weight: 700;
+          color: #fff;
+        }
+        &-title {
+          font-size: 14px;
+          margin: 0;
+          text-align: center;
+          margin-bottom: 140px;
+        }
+        img {
+          position: absolute;
+          z-index: -1;
+          top: 45px;
+          left: 50%;
+          margin-left: -93px;
+        }
+      }
+    }
+    .full-banner {
+      margin-bottom: 50px;
+      margin-top: 10px;
+    }
     &__item {
-      padding: 30px;
+      &-wpapper {
+        padding: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      img {
+        width: 185px;
+        height: 185px;
+      }
+      &-title {
+        min-height: 38px;
+      }
+    }
+    &__about {
+      margin-bottom: 60px;
+    }
+    &__partners {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      &-item {
+        margin: 0;
+      }
     }
   }
   .slider1:hover .owl-nav {
     display: flex !important;
+  }
+  .owl-stage-outer {
+    //padding-left: 1px;
   }
 }

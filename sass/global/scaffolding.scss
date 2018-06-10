@@ -39,6 +39,9 @@ body {
 button {
   outline: none;
 }
+i {
+  cursor: pointer;
+}
 .mobile {
   display: flex !important;
 }
@@ -129,6 +132,7 @@ button {
   background-color: $color-main !important;
   border-radius: 90px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .slick-dots li.slick-active,
 .main .owl-dots .owl-dot.active span {
@@ -165,8 +169,13 @@ button {
 }
 
 .owl-theme .owl-dots {
-  display: flex;
+  display: none;
   position: absolute;
   top: -25px;
   right: 0;
+}
+@media($mobile-width) {
+  .owl-theme .owl-dots {
+    display: flex;
+  }
 }
