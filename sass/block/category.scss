@@ -25,6 +25,9 @@
         width: 20px;
         text-align: center;
       }
+      a:hover {
+        color: $color-main;
+      }
     }
     &__all {
       text-align: right;

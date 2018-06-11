@@ -1,0 +1,122 @@
+.page-category {
+  &__title {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  &__all {
+    font-size: 14px;
+    color: #7f7f7f;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__content {
+    .main__title {
+      i {
+        color: #CCCCCC;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      i.open {
+        color: $color-secondary;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-btn {
+      display: none;
+    }
+  }
+  &__sub-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__nav-block {
+    display: flex;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:nth-of-type(2) {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      text-transform: none;
+      color: #7f7f7f;
+      margin-right: 10px;
+    }
+    select {
+      border: 0;
+      font-size: 14px;
+      outline: none;
+    }
+  }
+  &__content-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    .content__item {
+      max-width: 258px;
+      margin-bottom: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 281px;
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+  .page-category {
+    &__nav {
+      &-btn {
+        display: flex;
+      }
+    }
+    &__content-items {
+      .content__item {
+        margin-left: 0;
+        margin-right: 0;
+        width: 235px;
+      }
+    }
+    &__nav-block {
+      display: flex;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media ($desktop-width) {
+  .page-category {
+    &__content-items {
+      .content__item {
+        width: 258px;
+      }
+    }
+    &__nav-block {
+      &:nth-of-type(2) {
+        margin-right: 50px;
+      }
+    }
+  }
+}

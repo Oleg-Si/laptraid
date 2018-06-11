@@ -42,6 +42,18 @@ button {
 i {
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+  color: $color-secondary;
+}
+.full-banner {
+  margin-bottom: 30px;
+  width: 100%;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
 .mobile {
   display: flex !important;
 }

@@ -20,6 +20,11 @@
   &--favorites {
     padding-bottom: 40px;
   }
+  &--page-category {
+    .main__wrapper {
+      flex-wrap: wrap;
+    }
+  }
 }
 @media ($mobile-width) {
 
