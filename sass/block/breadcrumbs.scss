@@ -1,0 +1,53 @@
+.breadcrumbs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  &__wrapper {
+    @include container;
+  }
+  &__list {
+    @include reset-ul;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-right: 40px;
+    position: relative;
+    &::after {
+      @include pseudo;
+      width: 15px;
+      height: 15px;
+      right: -28px;
+      top: 3px;
+      background-image: url('../img/icons/caret-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 40%;
+
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $color-secondary;
+      font-size: 14px;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+  .breadcrumbs {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media ($desktop-width) {
+
+}

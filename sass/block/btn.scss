@@ -1,0 +1,25 @@
+.btn {
+  border: 0;
+  background-color: $color-main;
+  border-radius: 90px;
+  padding: 10px 25px;
+  font-weight: bold;
+  margin-right: auto;
+  max-width: 126px;
+  max-height: 39px;
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-main;
+    transition: 0.3s;
+    outline: none;
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
