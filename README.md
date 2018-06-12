@@ -1,4 +1,4 @@
-# laptraid [![Build status][travis-image]][travis-url]
+# laptraid
 
 Market (mediashark)
 
