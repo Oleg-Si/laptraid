@@ -1,5 +1,49 @@
 'use strict';
 
+/* -------------------Filter--------------------- */
+
+var filterButtonMore = document.querySelector('.filter__more');
+var filterHideItems = document.querySelectorAll('.filter__item--additional');
+
+if(filterButtonMore !== null) {
+  filterButtonMore.addEventListener('click', function () {
+    if (filterButtonMore.textContent == 'Показать все') {
+      filterButtonMore.textContent = 'Скрыть';
+    } else {
+      filterButtonMore.textContent = 'Показать все ';
+    }
+    filterHideItems.forEach(function (item) {
+      item.classList.toggle('filter__item--additional-open');
+    });
+  });
+}
+
+/* -------------------CategoryButton--------------------- */
+
+var buttonCategoryList = document.querySelector('.buttonCategoryList');
+var buttonCategoryItem = document.querySelector('.buttonCategoryItem');
+var buttonCategoryAriaContent = document.querySelector('.page-category__content-items');
+
+if (buttonCategoryItem !== null) {
+  buttonCategoryItem.addEventListener('click', function () {
+    if (buttonCategoryItem.classList.contains('open')) {} else {
+      buttonCategoryItem.classList.add('open');
+      buttonCategoryList.classList.remove('open');
+      buttonCategoryAriaContent.classList.remove('page-category__content-items--list');
+      }
+  });
+
+  buttonCategoryList.addEventListener('click', function () {
+    if (buttonCategoryList.classList.contains('open')) {} else {
+      buttonCategoryList.classList.add('open');
+      buttonCategoryItem.classList.remove('open');
+      buttonCategoryAriaContent.classList.add('page-category__content-items--list');
+    }
+  });
+}
+
+/* -------------------Menu--------------------- */
+
 var openMenu = document.querySelector('.openMenu');
 var closeMenu = document.querySelector('.closeMenu');
 var closeNavigation = document.querySelector('.closeNavigation');
@@ -38,6 +82,8 @@ closeNavigation.addEventListener('click', function () {
   mainNavigation.classList.remove('mobile-main-navigation--open');
   overlay.style.display = 'none';
 });
+
+/* -------------------Slider--------------------- */
 
 $('.single-item').slick({
   infinite: true,

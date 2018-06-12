@@ -24,7 +24,7 @@
     "eslint-config-htmlacademy": "0.5.2"
   },
   "scripts": {
-    "test": "editorconfig-cli",
+    "test": "eslint js",
     "build": "gulp fin",
     "start": "gulp build && gulp serve"
   },
