@@ -54,6 +54,22 @@ a {
     margin: 0 auto;
   }
 }
+.slider1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.slider2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.slider1:hover .owl-nav {
+  display: flex !important;
+}
+.slider2:hover .owl-nav {
+  display: flex !important;
+}
 .mobile {
   display: flex !important;
 }

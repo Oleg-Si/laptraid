@@ -15,11 +15,6 @@
   .small-banner {
     display: none;
   }
-  .slider1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-  }
   &__item {
     padding-left: 1px;
     padding-right: 1px;
@@ -37,6 +32,10 @@
     &-row {
       display: flex;
       align-items: center;
+      i {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
     &-descr {
       display: none;
@@ -205,11 +204,5 @@
         margin: 0;
       }
     }
-  }
-  .slider1:hover .owl-nav {
-    display: flex !important;
-  }
-  .owl-stage-outer {
-    //padding-left: 1px;
   }
 }

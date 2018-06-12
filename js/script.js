@@ -5,9 +5,9 @@
 var filterButtonMore = document.querySelector('.filter__more');
 var filterHideItems = document.querySelectorAll('.filter__item--additional');
 
-if(filterButtonMore !== null) {
+if (filterButtonMore !== null) {
   filterButtonMore.addEventListener('click', function () {
-    if (filterButtonMore.textContent == 'Показать все') {
+    if (filterButtonMore.textContent === 'Показать все') {
       filterButtonMore.textContent = 'Скрыть';
     } else {
       filterButtonMore.textContent = 'Показать все ';
@@ -30,7 +30,7 @@ if (buttonCategoryItem !== null) {
       buttonCategoryItem.classList.add('open');
       buttonCategoryList.classList.remove('open');
       buttonCategoryAriaContent.classList.remove('page-category__content-items--list');
-      }
+    }
   });
 
   buttonCategoryList.addEventListener('click', function () {
@@ -112,7 +112,7 @@ $('.small-banner').slick({
   dots: true
 });
 
-$('.owl-carousel').owlCarousel({
+$('.slider1').owlCarousel({
   loop: true,
   autoplay: true,
   autoplayTimeout: 3000,
@@ -128,6 +128,28 @@ $('.owl-carousel').owlCarousel({
     },
     1200: {
       items: 3
+    }
+  }
+});
+
+$('.slider2').owlCarousel({
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  margin: 55,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    768: {
+      items: 3,
+      margin: 20
+    },
+    1200: {
+      items: 4,
+      margin: 55
     }
   }
 });
