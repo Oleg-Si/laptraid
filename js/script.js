@@ -1,5 +1,27 @@
 'use strict';
 
+/* -------------------Product--------------------- */
+
+var productPlus = document.querySelector('.productPlus');
+var productMinus = document.querySelector('.productMinus');
+var productValue = document.querySelector('.productValue');
+
+if (productValue !== null) {
+  var value;
+  productMinus.addEventListener('click', function () {
+    value = productValue.value;
+    if (value >= 2) {
+      value--;
+      productValue.value = value;
+    }
+  });
+  productPlus.addEventListener('click', function () {
+    value = productValue.value;
+    value++;
+    productValue.value = value;
+  });
+}
+
 /* -------------------Filter--------------------- */
 
 var filterButtonMore = document.querySelector('.filter__more');

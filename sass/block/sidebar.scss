@@ -1,5 +1,72 @@
 .sidebar {
   display: none;
+  flex-wrap: wrap;
+  width: 218px;
+  max-height: 2000px;
+  &__banner {
+    margin-bottom: 30px;
+    img {
+      height: 287px;
+    }
+  }
+  &__news {
+    margin-bottom: 30px;
+  }
+  &__single {
+    margin-bottom: 18px;
+  }
+  &__date {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  &__rewievs {
+    margin-bottom: 30px;
+    width: 100%;
+    &-slider {
+      &-item {
+        font-size: 14px;
+        line-height: 17px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        outline: none;
+      }
+    }
+  }
+  &__call {
+    width: 100%;
+    padding: 20px 28px;
+    background-color: $color-main;
+    margin-bottom: 30px;
+    span {
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 5px;
+    }
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    i {
+      font-size: 20px;
+      line-height: 24px;
+      &:hover {
+        color: #fff;
+        transition: 0.3s;
+      }
+    }
+  }
 }
 @media ($mobile-width) {
 
@@ -7,73 +74,6 @@
 @media ($tablet-width) {
   .sidebar {
     display: flex;
-    flex-wrap: wrap;
-    width: 218px;
-    max-height: 2000px;
-    &__banner {
-      margin-bottom: 30px;
-      img {
-        height: 287px;
-      }
-    }
-    &__news {
-      margin-bottom: 30px;
-    }
-    &__single {
-      margin-bottom: 18px;
-    }
-    &__date {
-      font-size: 14px;
-      color: #666666;
-      margin-bottom: 0;
-    }
-    &__text {
-      font-size: 14px;
-      line-height: 17px;
-      margin-top: 5px;
-      margin-bottom: 0;
-    }
-    &__rewievs {
-      margin-bottom: 30px;
-      width: 100%;
-      &-slider {
-        &-item {
-          font-size: 14px;
-          line-height: 17px;
-          font-style: italic;
-          text-align: center;
-          margin-top: 40px;
-          margin-bottom: 40px;
-          outline: none;
-        }
-      }
-    }
-    &__call {
-      width: 100%;
-      padding: 20px 28px;
-      background-color: $color-main;
-      margin-bottom: 30px;
-      span {
-        text-align: center;
-        display: block;
-        font-size: 14px;
-        border-bottom: 2px solid #fff;
-        padding-bottom: 5px;
-      }
-    }
-    &__icons {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 15px;
-      i {
-        font-size: 20px;
-        line-height: 24px;
-        &:hover {
-          color: #fff;
-          transition: 0.3s;
-        }
-      }
-    }
   }
 }
 @media ($desktop-width) {

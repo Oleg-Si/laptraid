@@ -29,6 +29,9 @@
       font-size: 26px;
       line-height: 31px;
       color: $color-secondary;
+      &:hover {
+        color: $color-secondary;
+      }
     }
     &:hover {
       a {
