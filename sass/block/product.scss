@@ -1,0 +1,32 @@
+.product {
+  &__wrapper {
+    @include container;
+  }
+  &__slider {
+    max-width: 450px;
+  }
+}
+.lSSlideWrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.lSPager li {
+  border-bottom: 3px solid transparent;
+  border-radius: 0 !important;
+  &:hover {
+    border-bottom: 3px solid $color-main;
+  }
+  &.active {
+    border-bottom: 3px solid $color-main;
+  }
+}
+
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
