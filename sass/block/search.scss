@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   order: 3;
   margin-top: 20px;
+  position: relative;
   &__select {
     display: none;
     width: 135px;
@@ -19,6 +20,13 @@
     font-size: 14px;
     line-height: 17px;
     border: 0;
+    text-align: left;
+    align-items: center;
+    position: relative;
+    i {
+      margin-left: auto;
+      margin-right: 10px;
+    }
   }
   input {
     width: 76.5%;
@@ -64,7 +72,7 @@
 @media ($tablet-width) {
   .search {
     &__select {
-      display: block;
+      display: flex;
     }
     input {
       width: 528px;
